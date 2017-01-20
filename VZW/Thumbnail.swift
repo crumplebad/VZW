@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 /**
-*
+* This uses MV-VM architecture, not very relevant for this requirment.
 */
 class Thumbnail: NSObject {
 

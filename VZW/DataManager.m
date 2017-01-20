@@ -6,6 +6,11 @@
 //  Copyright © 2017 iJay. All rights reserved.
 //
 
+/**
+ * This DataMaager class does NOT store any data but abstracts the data soure to the view controllers. 
+ * It gets data from diffrent sources, DataModel(memory), DataStore(Persistent Storage), ImageDownloader(Network)
+ */
+
 #import "DataManager.h"
 #import "DataModel.h"
 #import "DataStore.h"
@@ -22,9 +27,6 @@
     return self;
 }
 
-/**
- *
- */
 - (void)setImageFor:(UIImageView *) imageView fromURLString:(NSString *)urlString {
     UIImage *anImage = [[[DataModel model] cachedThumbnails] objectForKey:urlString];
     if (anImage) {
@@ -34,16 +36,10 @@
     }
 }
 
-/**
- *
- */
 - (NSArray *)getThumbnails {
     return [[DataModel model] thumbnails];
 }
 
-/**
- *
- */
 - (void)sortBy:(NSString *)key andOrder:(BOOL)isAscending {
 
     NSSortDescriptor *sortDescriptor;

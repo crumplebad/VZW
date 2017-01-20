@@ -13,7 +13,7 @@
 @implementation ImageDownloader
 
 /**
- *
+ * This method downloads images, save it in the cache and asisgns it to image view.
  */
 - (void)loadimage:(UIImageView *)imageView  urlString:(NSString *)aUrlString{
     

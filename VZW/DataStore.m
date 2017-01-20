@@ -12,7 +12,7 @@
 @implementation DataStore
 
 /**
- *
+ * This method read teh JSON from the bundle and returns an array of ObjC/Swift objects.
  */
 - (NSArray *)getDataFromFile {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"image" ofType:@"json"];
